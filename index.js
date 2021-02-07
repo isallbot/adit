@@ -38,24 +38,24 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const { ind } = require('./language')
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:ADIT-BOT\n' 
-            + 'ORG: OWNER ADIT;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6289630267618:+62 896-3026-7618\n' 
+            + 'FN:BOT-ADIT\n' 
+            + 'ORG:OWNER ADIT;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6282259218016:+62 822-5921-8016\n' 
             + 'END:VCARD' 
 prefix = '!'
 blocked = []   
 limitawal = 50
-memberlimit = 3
-cr = '*MEMBER VERIFIED*'
+memberlimit = 2
+cr = '*BOT-ADIT VERIFIED*'
 
 /*
 ]=====> SETTINGS <=====[
 */
 const ownerNumber = ["6282259218016@s.whatsapp.net","6282259218016@s.whatsapp.net"]
 const botName = 'BOT-ADIT'
-const ownerName = 'ADIT GANS'
+const ownerName = 'ADIT'
 const BarBarKey = 'Nkwp9oR7Eg9yyKbejBpm'
-const XteamKey = 'test'
+const VhtearKey = 'BotWeA'
 const TobzKey = 'BotWeA'
 /*
 ]=====> SETTINGS <=====[
@@ -634,7 +634,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 if (args.length < 1) return reply('Yang mau di tulis apaan? titit?')
 isall = body.slice(7)
 reply('[❗] WAIT BRO GUE NULIS DUMLU YAKAN')
-buff = await getBuffer(`https://api.xteam.xyz/magernulis2?text=${isall}&APIKEY=${XteamKey}`)
+buff = await getBuffer(`https://api.vhtear.com/write?text=${isall}&apikey=${vhtear}`)
 client.sendMessage(from, buff, image, {quoted: mek, caption: 'Nulis sendiri gblok:v'})
 await limitAdd(sender)
 break					
@@ -645,7 +645,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 quotes = body.slice(1)
 const quo =['Lebih baik mengerti sedikit daripada salah mengerti.','Hampir semua pria memang mampu bertahan menghadapi kesulitan. Namun, jika Anda ingin menguji karakter sejati pria, beri dia kekuasaan.','Bila tekad seseorang kuat dan teguh, Tuhan akan bergabung dalam usahanya.','Penderitaan adalah pelajaran.','Ilmu pengetahuan tanpa agama adalah pincang.','Hidup itu seperti sebuah sepeda, agar tetap seimbang kita harus tetap bergerak.','Perbedaan masa lalu, sekarang, dan masa depan tak lebih dari ilusi yang keras kepala.','Sebuah meja, sebuah kursi, semangkuk buah, dan sebuah biola; apa lagi yang dibutuhkan agar seseorang bisa merasa bahagia?','Belas kasihanlah terhadap sesama, bersikap keraslah terhadap diri sendiri.','Cara paling baik untuk menggerakkan diri Anda ialah memberi tugas kepada diri sendiri.','Kita tidak boleh kehilangan semangat. Semangat adalah stimulan terkuat untuk mencintai, berkreasi dan berkeinginan untuk hidup lebih lama.','Manusia akan bahagia selama ia memilih untuk bahagia.','Saya tidak berharap menjadi segalanya bagi setiap orang. Saya hanya ingin menjadi sesuatu untuk seseorang.','Apabila sempurna akal seseorang, maka sedikit perkataannya.','Bahagialah orang yang dapat menjadi tuan untuk dirinya, menjadi kusir untuk nafsunya dan menjadi kapten untuk bahtera hidupnya.','Sahabat yang jujur lebih besar harganya daripada harta benda yang diwarisi dari nenek moyang.','Yang paling melelahkan dalam hidup adalah menjadi orang yang tidak tulus.','Terbuka untuk Anda, begitulah Tuhan memberi kita jalan untuk berusaha. Jangan pernah berfikir jalan sudah tertutup.','Penundaan adalah kuburan dimana peluang dikuburkan.','Cinta bukan saling menatap mata, namun melihat ke arah yang sama bersama-sama.','Kita adalah apa yang kita kerjakan berulang kali. Dengan demikian, kecemerlangan bukan tindakan, tetapi kebiasaan.','Jangan pernah mencoba menjadikan putra atau putri Anda menjadi seperti Anda. Diri Anda hanya cukup satu saja.','Jika Anda bisa membuat orang lain tertawa, maka Anda akan mendapatkan semua cinta yang Anda inginkan.','Masalah akan datang cepat atau lambat. Jika masalah datang, sambut dengan sebaik mungkin. Semakin ramah Anda menyapanya, semakin cepat ia pergi.','Kita tak bisa melakukan apapun untuk mengubah masa lalu. Tapi apapun yang kita lakukan bisa mengubah masa depan.','Kesabaran adalah teman dari kebijaksanaan.','Orang-orang kreatif termotivasi oleh keinginan untuk maju, bukan oleh keinginan untuk mengalahkan orang lain.','Dimanapun engkau berada selalulah menjadi yang terbaik dan berikan yang terbaik dari yang bisa kita berikan.','Kebencian seperti halnya cinta, berkobar karena hal-hal kecil.','Anda tidak perlu harus berhasil pada kali pertama.','Satu jam yang intensif, jauh lebih baik dan menguntungkan daripada bertahun-tahun bermimpi dan merenung-renung.','Hal terbaik yang bisa Anda lakukan untuk orang lain bukanlah membagikan kekayaan Anda, tetapi membantu dia untuk memiliki kekayaannya sendiri.','Tidak ada jaminan keberhasilan, tetapi tidak berusaha adalah jaminan kegagalan.','Aku tidak tahu kunci sukses itu apa, tapi kunci menuju kegagalan adalah mencoba membuat semua orang senang.']
 const tes = quo[Math.floor(Math.random() * quo.length)]
-client.sendMessage(from, ''+tes+'\n\n_By : FAISAL WAPI._', text, { quoted: mek })
+client.sendMessage(from, ''+tes+'\n\n_By : faisal wapi._', text, { quoted: mek })
 await limitAdd(sender)
 break
 				case 'tts':
@@ -679,7 +679,7 @@ break
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(4).trim()
-					anu = await fetchJson(https://api.xteam.xyz/ttp?file&text=${teks}`, {method: 'get'})
+					anu = await fetchJson(`https://mhankbarbar.tech/api/text2image?text=${teks}&apiKey=${BarBarKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -702,7 +702,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply(ind.stikga())
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'jangan lupa bilang mkasih [BOT-ADIT]'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'nih kak [(^.^)]'})
 						fs.unlinkSync(ran)
 					})
 					await limitAdd(sender)
@@ -714,12 +714,12 @@ break
                 var gh = body.slice(12)
 					var quote = gh.split("&")[0];
 					var wm = gh.split("&")[1];
-					const pref = `yang mau dijadiin quote apaan,gank?\n\ncontoh : ${prefix}bikinquote aku gak ganteng & Kata ADIT`
+					const pref = `yang mau dijadiin quote apaan, titit?\n\ncontoh : ${prefix}bikinquote aku bukan boneka & Kata ISALL`
 					if (args.length < 1) return reply(pref)
 					reply(ind.wait())
 					anu = await fetchJson(`https://terhambar.com/aw/qts/?kata=${quote}&author=${wm}&tipe=random`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {caption: 'jangan lupa bilang makasih >BOT-ADIT<', quoted: mek})
+					client.sendMessage(from, buffer, image, {caption: 'Nih kak >_<', quoted: mek})
 					await limitAdd(sender)
 					break
                    case 'stalkig':
@@ -727,7 +727,7 @@ break
                    if (!isRegistered) return reply(ind.noregis())
                    if (isLimit(sender)) return reply(ind.limitend(pusname))
                      teks = body.slice(9)
-                     hmm = await fetchJson(https://api.xteam.xyz/dl/igstalk?nama=${teks}&APIKEY=${XteamKey}`, {method: 'get'})
+                     hmm = await fetchJson(`https://tobz-api.herokuapp.com/api/stalk?username=${teks}&apikey=${VhtearKey}`, {method: 'get'})
                      reply('[❗] Sabar Lagi Stalking IG nya kak')
                      buffer = await getBuffer(hmm.data.picture)
                      hasil = `YAHAHA TELAH DI STALK BOS KU UNTUK USERNAME ${teks} \n\n *Username?* : _${hmm.data.result.username}_ \n *Nama??* : _${hmm.data.result.full_name}_ \n *Jumlah Follower??﹦?* : _${hmm.data.result.follower}_ \n *Jumlah Following?* : _${hmm.data.result.follow}_ \n *Jumlah Post?* : _${hmm.data.result.post_count}_ \n *Biografi?? :* _${hmm.data.result.biography}`
@@ -1292,7 +1292,7 @@ break
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('URL NYA TIDAK VALID KAK')				
-					anu = await fetchJson(`https://api.xteam.xyz/dl/ytmp4?url=${args[0]}&APIKEY=${XteamKey}`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ytv?url=${args[0]}=${VhtearKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*➸ JUDUL* : ${anu.result.title}\n\n*[WAIT] Proses Dumlu Yakan*`
 					thumb = await getBuffer(anu.result.imgUrl)
@@ -1321,7 +1321,7 @@ break
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname)) 
                 reply(ind.wait())
-                anu = await fetchJson(`https://api.xteam.xyz/dl/play?lagu=${body.slice(6)}&APIKEY=${XteamKey}`)
+                anu = await fetchJson(`https://tobz-api.herokuapp.com/api/yta?url=${body.slice(6)}&apikey=${VhtearKey}`)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*[❗] Lagu Ditemukan*\n➸ Judul : ${anu.result.title}\n➸ Durasi : ${anu.result.duration}\n➸ Size : ${anu.result.size}\n\n*[WAIT] Proses Dumlu Yakan*`
                 buffer = await getBuffer(anu.result.image)
@@ -1438,7 +1438,7 @@ break
                    if (!isNsfw) return reply(ind.nsfwoff())
 					gatauda = body.slice(10)
 					reply(ind.wait())
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/neonime?q=Danmach&apikey=${XteamKey}`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/neonime?q=Danmach&apikey=${VhtearKey}`, {method: 'get'})
 					buffer = await getBuffer(anu.result.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender)
@@ -1500,7 +1500,7 @@ break
                    if (!isNsfw) return reply(ind.nsfwoff())
 					gatauda = body.slice(15)
 					reply(ind.wait())
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=${XteamKey}`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=${VhtearKey}`, {method: 'get'})
 					buffer = await getBuffer(anu.result.url)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender)
@@ -1511,7 +1511,7 @@ break
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                    if (!isGroup) return reply(ind.groupo())
                    if (!isNsfw) return reply(ind.nsfwoff())
-						data = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu?apikey=${XteamKey}`)
+						data = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu?apikey=${VhtearKey}`)
 						buffer = await getBuffer(data.result.foto)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: '>_<'})
 					await limitAdd(sender)
@@ -1717,7 +1717,7 @@ break
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*➸ Nama bot* : ${me.name}\n*➸ OWNER* : *ADIT*\n*➸ AUTHOR* : BOT-ADIT\n*➸ Nomor Bot* : @${me.jid.split('@')[0]}\n*➸ Prefix* : ${prefix}\n*➸ Total Block Contact* : ${blocked.length}\n*➸ The bot is active on* : ${kyun(uptime)}`
+					teks = `*➸ Nama bot* : ${me.name}\n*➸ OWNER* : *BOT-ADIT*\n*➸ AUTHOR* : BOT-ADIT\n*➸ Nomor Bot* : @${me.jid.split('@')[0]}\n*➸ Prefix* : ${prefix}\n*➸ Total Block Contact* : ${blocked.length}\n*➸ The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1725,7 +1725,7 @@ break
             case 'owner':
             case 'creator':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                  client.sendMessage(from, 'ini kontak owner ya jangan lupa save:v',MessageType.text, { quoted: mek} )
+                  client.sendMessage(from, 'Tuh Nomor Pacarku >_<, Ehh Ownerku mksdnya:v',MessageType.text, { quoted: mek} )
 					break
                 case 'speed':
                 case 'ping':
@@ -1761,7 +1761,7 @@ break
 					var alan3 = gh.split("&")[1];
 					if (args.length < 1) return reply(ind.wrongf())
 					reply(ind.wait())
-					buffer = await getBuffer(`https://api.vhtear.com/pornlogo?text1=${alan2}&text2=${alan3}&apikey=${XteamKey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/pornlogo?text1=${alan2}&text2=${alan3}&apikey=${VhtearKey}`)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender)
 					break
@@ -1773,7 +1773,7 @@ break
 					thun = body.slice(13)
 					if (thun.length > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(ind.wait())
-					buffer = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=${XteamKey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=${VhtearKey}`)
 					 client.sendMessage(from, buffer, image, {quoted: mek})
 					break												
 /*
@@ -1915,6 +1915,7 @@ case 'bc':
 ]=====> TQTO <=====[
 > ISALL GANS
 > BOT-ISALL ID
+> ADIT-BOT
 > REVOER ID
 > ARIS ID
 > NADIA CANS
